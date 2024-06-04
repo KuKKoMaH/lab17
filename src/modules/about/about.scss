@@ -2,6 +2,7 @@
   $this: &;
 
   position: relative;
+  margin: vw-size(250) 0;
 
   &__bg {
     position: absolute;
@@ -14,7 +15,6 @@
 
   &__container {
     display: flex;
-    padding: vw-size(250) 0;
   }
 
   &__sup {
@@ -33,7 +33,7 @@
   }
 
   &__aside {
-    max-width: vw-size(690) + vw-size(50);
+    max-width: vw-size(690 + 50);
     padding-left: vw-size(50);
     margin-left: auto;
 
