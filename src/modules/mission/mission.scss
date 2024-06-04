@@ -1,0 +1,38 @@
+.mission {
+  $this: &;
+
+  margin: 230px 0;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    font-size: 290px;
+    line-height: 1;
+    font-weight: 900;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-image: linear-gradient(to bottom, $gray2, $black);
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 125px 15px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    @include manrope();
+    font-size: 42px;
+    line-height: 54px;
+    font-weight: 200;
+    padding-left: 72px;
+  }
+}

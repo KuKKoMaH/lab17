@@ -1,0 +1,36 @@
+import "./style/banner.scss";
+import "destyle.css/destyle.css";
+// import 'selectize/dist/css/selectize.css';
+import 'nouislider/dist/nouislider.css';
+import 'suggestions-jquery/dist/css/suggestions.min.css';
+// import 'swiper/swiper-bundle.css';
+
+// import "./style/blocks/wpcf7.scss";
+// import "./style/blocks/btn.scss";
+// import "./style/blocks/checkbox.scss";
+// import "./style/blocks/counter.scss";
+// import "./style/blocks/input.scss";
+// import "./style/blocks/select.scss";
+// import "./style/blocks/slider.scss";
+// import "./style/blocks/file.scss";
+// import "./style/blocks/tabs.scss";
+import "./style/fonts.scss";
+import "./style/common.scss";
+import "./style/typography.scss";
+
+import './modules/header/header.scss';
+import './modules/footer/footer.scss';
+import './modules/popup/popup.scss';
+import './modules/frontSlider/frontSlider.scss';
+import './modules/about/about.scss';
+import './modules/projects/projects.scss';
+import './modules/mission/mission.scss';
+import './modules/aboutHead/aboutHead.scss';
+import './modules/complex/complex.scss';
+import './modules/benefits/benefits.scss';
+import './modules/steps/steps.scss';
+import './modules/team/team.scss';
+import './modules/projectsHead/projectsHead.scss';
+import './modules/contacts/contacts.scss';
+import './modules/clients/clients.scss';
+import './modules/project/project.scss';

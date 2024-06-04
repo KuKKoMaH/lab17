@@ -1,0 +1,21 @@
+.frontSlider
+  .frontSlider__slider
+    .frontSlider__slides
+      each i in [1,2,3]
+        .frontSlider__slide
+          img.frontSlider__bg(src=require('src/modules/frontSlider/img/slide.jpg'))
+          .c
+            .frontSlider__content
+              .frontSlider__title
+                | СОЗДАЕМ#[br]
+                | ФИТНЕС—ЦЕНТРЫ#[br]
+                | МЕЖДУНАРОДНОГО#[br]
+                | УРОВНЯ
+              .frontSlider__footer
+                .frontSlider__note ЗНАЕМ ВСЕ ТОНКОСТИ ЭТОЙ СФЕРЫ
+                .frontSlider__aside
+                  span РАБОТАЕМ ОТ ХАБАРОВСКА
+                  span.frontSlider__separator
+                  span ДО ЮЖНОЙ КАЛИФОРНИИ
+
+    button.frontSlider__button: +the_svg('arrow-right')

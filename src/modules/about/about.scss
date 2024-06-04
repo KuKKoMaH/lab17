@@ -1,0 +1,73 @@
+.about {
+  $this: &;
+
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 430px;
+    z-index: -1;
+  }
+
+  &__container {
+    display: flex;
+    padding: 250px 0;
+  }
+
+  &__sup {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 60px;
+    color: $red;
+  }
+
+  &__title {
+    @include h2();
+
+    span {
+      color: $cyan;
+    }
+  }
+
+  &__aside {
+    max-width: 690px + 50px;
+    padding-left: 50px;
+    margin-left: auto;
+
+    > * {
+      margin-bottom: 120px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__value {
+    @include h2();
+  }
+
+  &__value + &__label {
+    margin-top: 18px;
+  }
+
+  &__label + &__value {
+    margin-top: 18px;
+  }
+
+  &__label {
+    @include manrope();
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+}

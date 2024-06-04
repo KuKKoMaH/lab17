@@ -1,0 +1,8 @@
+.clients
+  .c
+    .clients__title НАШИ КЛИЕНТЫ
+    .clients__items
+      each i in [1,2,3,4,5,6,7,8,9,0,1,2,3,4,5]
+        .clients__item
+          a.clients__card(href='#')
+            .clients__content: img(src=require('src/modules/clients/img/logo.jpg'))

@@ -1,0 +1,93 @@
+.frontSlider {
+  $this: &;
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slides {
+    display: flex;
+  }
+
+  &__slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 880px;
+    padding: 70px 0;
+    padding-right: 180px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% + 180px);
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__title {
+    @include h1();
+    margin: auto 0;
+  }
+
+  &__footer {
+    display: flex;
+  }
+
+  &__note {
+    @include h4();
+    background: $red;
+    padding: 10px;
+  }
+
+  &__aside {
+    margin-left: auto;
+    @include h5();
+    display: flex;
+    align-items: center;
+  }
+
+  &__separator {
+    display: block;
+    background: $cyan;
+    width: 80px;
+    height: 1px;
+    margin: 0 20px;
+  }
+
+  &__button {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    width: 60px;
+    height: 60px;
+    background: $black;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include anim();
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:disabled {
+      @include hidden();
+    }
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+}

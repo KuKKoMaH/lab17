@@ -1,0 +1,21 @@
+.complex {
+  $this: &;
+
+  margin: 230px 0;
+
+  &__title {
+    @include h3_regular();
+    text-align: center;
+
+    strong {
+      font-weight: 900;
+    }
+  }
+
+  &__img {
+    margin-top: 230px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

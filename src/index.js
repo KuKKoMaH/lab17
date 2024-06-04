@@ -1,0 +1,25 @@
+import 'jquery';
+import 'selectize';
+import './js/scriptLoader';
+import './js/breakpoints';
+import './js/init';
+import './js/initGallery';
+import './style';
+import './sprites';
+
+import './modules/header/header.js';
+import './modules/footer/footer.js';
+import './modules/popup/popup.js';
+import './modules/frontSlider/frontSlider.js';
+import './modules/about/about.js';
+import './modules/projects/projects.js';
+import './modules/mission/mission.js';
+import './modules/aboutHead/aboutHead.js';
+import './modules/complex/complex.js';
+import './modules/benefits/benefits.js';
+import './modules/steps/steps.js';
+import './modules/team/team.js';
+import './modules/projectsHead/projectsHead.js';
+import './modules/contacts/contacts.js';
+import './modules/clients/clients.js';
+import './modules/project/project.js';

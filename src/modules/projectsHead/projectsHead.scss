@@ -1,0 +1,40 @@
+.projectsHead {
+  $this: &;
+
+  margin: 230px 0;
+
+  &__title {
+    @include h1();
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  &__switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 230px;
+      height: 60px;
+      border: 2px solid $gray3;
+      @include h4_regular();
+      text-decoration: none;
+      @include anim();
+      margin: 0 -1px;
+
+      &.active {
+        z-index: 1;
+        border-color: $cyan;
+      }
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+}

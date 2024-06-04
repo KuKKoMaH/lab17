@@ -1,0 +1,65 @@
+.footer {
+  $this: &;
+
+  margin-top: auto;
+  position: relative;
+  border-top: 1px solid $gray3;
+  overflow: hidden;
+  padding: 130px 0;
+
+  &__img {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__content {
+    position: relative;
+    left: 50%;
+    margin-left: 160px;
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 70px;
+  }
+
+  &__info {
+    @include h6();
+    @include manrope();
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__phone {
+    margin: 20px 0;
+
+    a {
+      font-size: 40px;
+      line-height: 1;
+      color: $cyan;
+      text-decoration: none;
+      font-weight: 900;
+    }
+  }
+
+  &__links {
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-size: 20px;
+      line-height: 1;
+      color: $red;
+      margin-right: 40px;
+      text-decoration: none;
+      letter-spacing: .4em;
+    }
+  }
+}

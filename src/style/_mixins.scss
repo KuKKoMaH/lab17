@@ -1,0 +1,157 @@
+@mixin cf() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin anim($duration: .1s) {
+  transition: all $duration ease-in;
+}
+
+@mixin media-max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media($condition) {
+  @if ($condition == 'lg') {
+    @media screen and (max-width: $breakpoint-lg - 1) {
+      @content;
+    }
+  }
+  @if ($condition == 'md') {
+    @media screen and (max-width: $breakpoint-md - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile() {
+  @include media('md') {
+    @content;
+  }
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin hidden() {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+@mixin visible() {
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin sprite($name) {
+  background-image: url('img/sprite.svg#' + $name + '-usage');
+}
+
+@mixin manrope() {
+  font-family: 'Manrope', sans-serif;
+}
+
+@mixin gilroy() {
+  font-family: 'Gilroy', sans-serif;
+}
+
+@mixin header() {
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+
+@mixin h1() {
+  font-size: 110px;
+  font-weight: 900;
+  @include header();
+  @include mobile() {
+    font-size: 42px;
+  }
+}
+
+@mixin h2() {
+  font-size: 90px;
+  font-weight: 900;
+  @include header();
+  @include mobile() {
+    font-size: 34px;
+  }
+}
+
+@mixin h3() {
+  font-size: 70px;
+  font-weight: 900;
+  @include header();
+  @include mobile() {
+    font-size: 26px;
+  }
+}
+
+@mixin h3_regular() {
+  font-size: 70px;
+  font-weight: 400;
+  @include header();
+  @include mobile() {
+    font-size: 26px;
+  }
+}
+
+@mixin h4() {
+  font-size: 32px;
+  font-weight: 900;
+  @include header();
+  @include mobile() {
+    font-size: 20px;
+  }
+
+}
+
+@mixin h4_regular() {
+  font-size: 32px;
+  font-weight: 400;
+  @include header();
+  @include mobile() {
+    font-size: 20px;
+  }
+}
+
+@mixin h5() {
+  font-size: 24px;
+  font-weight: 900;
+  @include header();
+  @include mobile() {
+    font-size: 16px;
+  }
+}
+
+@mixin h6() {
+  font-size: 22px;
+  font-weight: 400;
+  @include header();
+  line-height: 34px;
+  @include mobile() {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

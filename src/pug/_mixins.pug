@@ -1,0 +1,11 @@
+mixin the_svg(svgIcon, fileName)
+  svg()&attributes(attributes)
+    use(xlink:href=`img/${fileName ? fileName + '.sprite' : 'sprite'}.svg#` + svgIcon + '-usage')
+
+mixin breadcrumbs(items)
+  .breadcrumbs
+    span
+      span
+        a(href="#") Главная
+        each i in items
+          span=i

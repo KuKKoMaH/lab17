@@ -1,0 +1,62 @@
+.contacts {
+  $this: &;
+
+  padding: 230px 0;
+
+  &__title {
+    @include h1();
+    margin-bottom: 230px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -60px 0;
+    align-items: flex-start;
+  }
+
+  &__item {
+    width: 50%;
+    margin: 60px 0;
+    border-left: 4px solid $cyan;
+    padding-left: 80px;
+  }
+
+  &__label {
+    color: $gray2;
+    font-size: 20px;
+    letter-spacing: .4em;
+    @include manrope();
+    margin-bottom: 32px;
+  }
+
+  &__value {
+    font-size: 32px;
+    @include manrope();
+    max-width: 500px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__phone {
+    @include gilroy();
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 900;
+    color: $cyan;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 32px;
+      font-size: 32px;
+      letter-spacing: .4em;
+      color: $red;
+    }
+  }
+}

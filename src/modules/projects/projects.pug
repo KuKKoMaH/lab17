@@ -1,0 +1,18 @@
+.projects
+  .c
+    .projects__items
+      each i in [1,2,3,4]
+        .projects__item
+          a.projects__card.projects__card--premium(href='#')
+            .projects__label ПРЕМИУМ
+            img.projects__img(src=require('src/modules/projects/img/img.jpg'))
+      each i in [1,2,3,4]
+        .projects__item
+          a.projects__card.projects__card--business(href='#')
+            .projects__label БИЗНЕС
+            img.projects__img(src=require('src/modules/projects/img/img.jpg'))
+      each i in [1,2,3,4]
+        .projects__item
+          a.projects__card.projects__card--comfort(href='#')
+            .projects__label КОМФОРТ
+            img.projects__img(src=require('src/modules/projects/img/img.jpg'))

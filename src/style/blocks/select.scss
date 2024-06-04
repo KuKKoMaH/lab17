@@ -1,0 +1,113 @@
+.selectize {
+  $this: &;
+
+
+  &-control {
+    text-align: left;
+    font-weight: normal;
+
+
+    .item {
+      flex: 1;
+      //display: flex;
+      //align-items: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &-input {
+    position: relative;
+    height: 44px;
+    border: 1px solid $gray400;
+    border-radius: 8px;
+    padding: 0 45px 0 14px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.2;
+    cursor: pointer;
+    @include anim();
+
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 5px;
+      height: 1px;
+      background: $gray900;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+      right: 22px;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+      right: 19px;
+    }
+
+    &:hover {
+      border-color: $gray600;
+    }
+
+    &.input-active {
+      border-color: $gray600;
+    }
+
+    &.disabled {
+      background: $black50;
+      color: $gray500;
+
+      &:hover {
+        border-color: $gray400;
+      }
+      &:before, &:after {
+        background: $gray500;
+      }
+    }
+
+    //input {
+    //  display: none;
+    //}
+  }
+
+
+  &-dropdown {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+    border: 1px solid $gray300;
+    //border-radius: 4px;
+    z-index: 3;
+    margin-top: 2px;
+    overflow: hidden;
+    min-width: 220px;
+
+    .option {
+      min-height: 41px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include anim();
+
+      &.active {
+        background: $gray200;
+      }
+
+      //&.selected {
+      //  background: $red;
+      //  color: $white;
+      //}
+    }
+  }
+
+  &-dropdown-content {
+    max-height: 300px;
+    overflow: auto;
+  }
+}
