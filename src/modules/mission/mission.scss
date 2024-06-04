@@ -18,6 +18,12 @@
     color: transparent;
   }
 
+  &__img  {
+    width: vw-size(560);
+    flex-shrink: 0;
+    height: auto;
+  }
+
   &__container {
     display: flex;
     align-items: center;

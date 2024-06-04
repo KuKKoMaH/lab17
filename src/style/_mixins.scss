@@ -6,6 +6,14 @@
   }
 }
 
+@mixin anim2($properties) {
+  $transitions: "";
+  @each $property in $properties {
+    $transitions: if($transitions == "", "#{$property} 0.1s ease-in", "#{$transitions}, #{$property} 0.3s ease-in");
+  }
+  transition: #{$transitions};
+}
+
 @mixin anim($duration: .1s) {
   transition: all $duration ease-in;
 }

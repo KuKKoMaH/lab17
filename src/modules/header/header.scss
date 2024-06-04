@@ -7,6 +7,10 @@
     height: vw-size(148);
   }
 
+  &__logo {
+    width: vw-size(280);
+  }
+
   &__menu {
     margin: 0 auto;
 
@@ -30,7 +34,7 @@
       @include h5();
       text-transform: uppercase;
       text-decoration: none;
-      @include anim();
+      @include anim2(color);
 
       &:hover {
         color: $cyan;
@@ -52,8 +56,8 @@
       align-items: center;
       justify-content: center;
       border: vw-size(2) solid $gray3;
-      margin: 0 -vw-size(1);
-      @include anim();
+      margin: 0 -#{vw-size(1)};
+      @include anim2(border-color color);
 
       &.active {
         border-color: $cyan;

@@ -6,7 +6,7 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: -vw-size(30);
+    margin: -#{vw-size(30)};
   }
 
   &__item {
@@ -19,7 +19,7 @@
     position: relative;
     border: vw-size(1) solid $gray3;
     padding: vw-size(55);
-    @include anim();
+    @include anim2(border-color background);
 
     &:hover {
       #{$this}__img {
@@ -67,15 +67,14 @@
     padding: vw-size(8);
     background: $gray2;
     transform-origin: 0 100%;
-    @include anim();
+    @include anim2(background);
   }
 
   &__img {
     display: block;
-    max-width: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
     filter: grayscale(100%);
-    @include anim();
+    @include anim2(filter);
   }
 }
