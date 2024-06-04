@@ -1,5 +1,24 @@
 .project
   .c
-    .projects__main
-      .projects__info
-      .projects__picture
+    .project__main
+      .project__info
+        .project__category БИЗНЕСС
+        .project__title Citrus Fitness Любимый
+        .project__items
+          .project__item
+            .project__label ГОД ОТКРЫТИЯ:
+            .project__value 2019 год
+          .project__item
+            .project__label РАСПОЛОЖЕНИЕ:
+            .project__value Оренбург, Россия
+          .project__item
+            .project__label МЕТРАЖ:
+            .project__value 3000 м. кв.
+      .project__picture
+        img(src=require('src/modules/project/img/img.jpg'))
+    .project__images
+      .project__image: img(src=require('src/modules/project/img/img.jpg'))
+      .project__image: img(src=require('src/modules/project/img/img.jpg'))
+      .project__image: img(src=require('src/modules/project/img/img.jpg'))
+      .project__image: img(src=require('src/modules/project/img/img.jpg'))
+      .project__image: img(src=require('src/modules/project/img/img.jpg'))

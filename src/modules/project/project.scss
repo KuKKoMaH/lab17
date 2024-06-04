@@ -1,3 +1,119 @@
-.project{
-    $this: &;
+.project {
+  $this: &;
+
+  padding-bottom: 230px;
+
+  &__main {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__info {
+    width: calc(50% + 180px);
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__picture {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__category {
+    @include h4();
+    padding: 8px;
+    background: $red;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @include h1();
+  }
+
+  &__items {
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: -30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 50%;
+    border-left: 4px solid $cyan;
+    padding-left: 40px;
+    margin: 30px 0;
+  }
+
+  &__label {
+    @include manrope();
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: .4em;
+    margin-bottom: 20px;
+    color: $gray2;
+  }
+
+  &__value {
+    @include h4_regular();
+  }
+
+  &__picture {
+    height: 880px;
+
+    img {
+      display: block;
+      width: calc(50vw - 180px - var(--scrollbar-width, 0px) / 2);
+      max-width: 1000px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__images {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    display: flex;
+    //height: 880px;
+    margin-top: 120px;
+
+    &:nth-child(3n + 1) {
+      width: 100%;
+      justify-content: flex-end;
+
+      img {
+        width: calc(100% + (100vw - #{$container-lg} + var(--scrollbar-width, 0px)) / 2 + 15px);
+      }
+    }
+
+    &:nth-child(3n + 2) {
+      width: 65%;
+      padding-right: 120px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(3n + 3) {
+      width: 35%;
+
+      img {
+        width: calc(100% + (100vw - #{$container-lg} + var(--scrollbar-width, 0px)) / 2 + 15px);
+      }
+    }
+
+    img {
+      display: block;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 }

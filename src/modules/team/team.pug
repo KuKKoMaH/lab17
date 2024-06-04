@@ -2,9 +2,11 @@
   .c
     .team__container
       .team__main
-        .team__title
-          | КОМАНДА #[br]
-          | LAB SEVENTEEN
+        .team__head
+          .team__placeholder
+          .team__title
+            | КОМАНДА #[br]
+            | LAB SEVENTEEN
         .team__card.team__card--big
           img.team__img(src=require('src/modules/team/img/img.jpg'))
           .team__content
@@ -44,6 +46,24 @@
               .team__content
                 .team__name Алексей
                 .team__position гуру инжиниринга
+          .team__item
+            .team__card
+              img.team__img(src=require('src/modules/team/img/img.jpg'))
+              .team__content
+                .team__name Елизавета
+                .team__position дизайнер эмоций
+          .team__item
+            .team__card
+              img.team__img(src=require('src/modules/team/img/img.jpg'))
+              .team__content
+                .team__name Елизавета
+                .team__position дизайнер эмоций
+          .team__item
+            .team__card
+              img.team__img(src=require('src/modules/team/img/img.jpg'))
+              .team__content
+                .team__name Елизавета
+                .team__position дизайнер эмоций
           .team__item
             .team__card
               img.team__img(src=require('src/modules/team/img/img.jpg'))
