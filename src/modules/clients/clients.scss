@@ -11,18 +11,19 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: -vw-size(30);
+    margin: -#{vw-size(30)};
   }
 
   &__item {
     padding: vw-size(30);
+    width: calc(100% / 6);
   }
 
   &__card {
     display: block;
     border: vw-size(2) solid $gray3;
     padding: vw-size(58);
-    @include anim();
+    @include anim2(border-color);
 
     &:hover {
       border-color: $cyan;

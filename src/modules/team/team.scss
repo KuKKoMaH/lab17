@@ -48,7 +48,7 @@
   &__items {
     //display: flex;
     //flex-wrap: wrap;
-    margin: -vw-size(6);
+    margin: -#{vw-size(6)};
   }
 
   &__item {
@@ -83,6 +83,7 @@
   }
 
   &__img {
+    width: 100%;
     max-width: 100%;
     height: auto;
     filter: grayscale(100%);

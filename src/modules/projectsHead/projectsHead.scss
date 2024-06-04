@@ -24,8 +24,8 @@
       border: vw-size(2) solid $gray3;
       @include h4_regular();
       text-decoration: none;
-      @include anim();
-      margin: 0 -vw-size(1);
+      margin: 0 -#{vw-size(1)};
+      @include anim2(border-color color);
 
       &.active {
         z-index: 1;

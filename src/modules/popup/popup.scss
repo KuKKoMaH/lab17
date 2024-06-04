@@ -180,7 +180,7 @@
 
 @keyframes mmslideIn {
   from {
-    transform: translateY(-vw-size(40));
+    transform: translateY(-#{vw-size(40)});
   }
   to {
     transform: translateY(0);

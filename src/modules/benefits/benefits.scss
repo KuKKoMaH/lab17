@@ -11,7 +11,7 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: -vw-size(60) -vw-size(30);
+    margin: -#{vw-size(60)} -#{vw-size(30)};
 
   }
 
