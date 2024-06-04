@@ -1,7 +1,7 @@
 .complex {
   $this: &;
 
-  margin: 230px 0;
+  margin: vw-size(230) 0;
 
   &__title {
     @include h3_regular();
@@ -13,7 +13,7 @@
   }
 
   &__img {
-    margin-top: 230px;
+    margin-top: vw-size(230);
     display: block;
     max-width: 100%;
     height: auto;

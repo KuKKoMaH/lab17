@@ -1,39 +1,39 @@
 .contacts {
   $this: &;
 
-  padding: 230px 0;
+  padding: vw-size(230) 0;
 
   &__title {
     @include h1();
-    margin-bottom: 230px;
+    margin-bottom: vw-size(230);
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: -60px 0;
+    margin: -vw-size(60) 0;
     align-items: flex-start;
   }
 
   &__item {
     width: 50%;
-    margin: 60px 0;
-    border-left: 4px solid $cyan;
-    padding-left: 80px;
+    margin: vw-size(60) 0;
+    border-left: vw-size(4) solid $cyan;
+    padding-left: vw-size(80);
   }
 
   &__label {
     color: $gray2;
-    font-size: 20px;
+    @include font-size(20);
     letter-spacing: .4em;
     @include manrope();
-    margin-bottom: 32px;
+    margin-bottom: vw-size(32);
   }
 
   &__value {
-    font-size: 32px;
+    @include font-size(32);
     @include manrope();
-    max-width: 500px;
+    max-width: vw-size(500);
 
     a {
       text-decoration: none;
@@ -42,7 +42,7 @@
 
   &__phone {
     @include gilroy();
-    font-size: 60px;
+    @include font-size(60);
     line-height: 1;
     font-weight: 900;
     color: $cyan;
@@ -53,8 +53,8 @@
     flex-direction: column;
 
     a {
-      margin-bottom: 32px;
-      font-size: 32px;
+      margin-bottom: vw-size(32);
+      @include font-size(32);
       letter-spacing: .4em;
       color: $red;
     }

@@ -4,7 +4,7 @@
   .c {
     display: flex;
     align-items: center;
-    height: 148px;
+    height: vw-size(148);
   }
 
   &__menu {
@@ -23,7 +23,7 @@
     }
 
     li {
-      padding: 0 12px;
+      padding: 0 vw-size(12);
     }
 
     a {
@@ -43,16 +43,16 @@
 
     a {
       position: relative;
-      font-size: 24px;
+      @include font-size(24);
       line-height: 1;
       text-decoration: none;
-      width: 70px;
-      height: 40px;
+      width: vw-size(70);
+      height: vw-size(40);
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px solid $gray3;
-      margin: 0 -1px;
+      border: vw-size(2) solid $gray3;
+      margin: 0 -vw-size(1);
       @include anim();
 
       &.active {

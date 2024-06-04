@@ -1,7 +1,7 @@
 .team {
   $this: &;
 
-  margin: 230px 0;
+  margin: vw-size(230) 0;
 
   &__container {
     //display: flex;
@@ -12,8 +12,8 @@
   &__main {
     float: left;
     width: 50%;
-    padding-right: 6px;
-    //margin-right: 12px;
+    padding-right: vw-size(6);
+    //margin-right: vw-size(12);
     display: flex;
     flex-direction: column;
   }
@@ -24,7 +24,7 @@
 
   &__head {
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: vw-size(12);
   }
 
   &__placeholder {
@@ -48,13 +48,13 @@
   &__items {
     //display: flex;
     //flex-wrap: wrap;
-    margin: -6px;
+    margin: -vw-size(6);
   }
 
   &__item {
     float: left;
     width: 25%;
-    padding: 6px;
+    padding: vw-size(6);
   }
 
   &__card {
@@ -63,12 +63,12 @@
     &--big {
       #{$this} {
         &__content {
-          padding: 50px;
+          padding: vw-size(50);
         }
 
         &__name {
           @include h4();
-          margin-bottom: 32px;
+          margin-bottom: vw-size(32);
         }
 
         &__position {
@@ -76,7 +76,7 @@
         }
 
         &__label {
-          margin-top: 32px;
+          margin-top: vw-size(32);
         }
       }
     }
@@ -94,7 +94,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px;
+    padding: vw-size(30);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -103,9 +103,9 @@
   &__name {
     @include h5();
     text-transform: uppercase;
-    padding: 8px;
+    padding: vw-size(8);
     background: $gray2;
-    margin-bottom: 16px;
+    margin-bottom: vw-size(16);
   }
 
   &__position {
@@ -118,6 +118,6 @@
     @include h6();
     @include manrope();
     color: $gray2;
-    margin-top: 16px;
+    margin-top: vw-size(16);
   }
 }

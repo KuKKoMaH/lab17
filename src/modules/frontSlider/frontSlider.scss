@@ -19,16 +19,16 @@
   &__content {
     display: flex;
     flex-direction: column;
-    height: 880px;
-    padding: 70px 0;
-    padding-right: 180px;
+    height: vw-size(880);
+    padding: vw-size(70) 0;
+    padding-right: vw-size(180);
   }
 
   &__bg {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% + 180px);
+    width: calc(100% + vw-size(180));
     height: 100%;
     object-fit: cover;
     z-index: -1;
@@ -46,7 +46,7 @@
   &__note {
     @include h4();
     background: $red;
-    padding: 10px;
+    padding: vw-size(10);
   }
 
   &__aside {
@@ -59,17 +59,17 @@
   &__separator {
     display: block;
     background: $cyan;
-    width: 80px;
-    height: 1px;
-    margin: 0 20px;
+    width: vw-size(80);
+    height: vw-size(1);
+    margin: 0 vw-size(20);
   }
 
   &__button {
     position: absolute;
-    right: 60px;
-    bottom: 60px;
-    width: 60px;
-    height: 60px;
+    right: vw-size(60);
+    bottom: vw-size(60);
+    width: vw-size(60);
+    height: vw-size(60);
     background: $black;
     color: $white;
     display: flex;
@@ -78,8 +78,8 @@
     @include anim();
 
     svg {
-      width: 32px;
-      height: 32px;
+      width: vw-size(32);
+      height: vw-size(32);
     }
 
     &:disabled {

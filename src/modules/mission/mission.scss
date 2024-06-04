@@ -1,12 +1,12 @@
 .mission {
   $this: &;
 
-  margin: 230px 0;
+  margin: vw-size(230) 0;
   position: relative;
 
   &__title {
     position: absolute;
-    font-size: 290px;
+    @include font-size(290);
     line-height: 1;
     font-weight: 900;
     white-space: nowrap;
@@ -21,18 +21,18 @@
   &__container {
     display: flex;
     align-items: center;
-    max-width: 1470px;
+    max-width: vw-size(1470);
     margin: 0 auto;
-    padding: 125px 15px 0;
+    padding: vw-size(125) vw-size(15) 0;
     position: relative;
     z-index: 1;
   }
 
   &__text {
     @include manrope();
-    font-size: 42px;
-    line-height: 54px;
+    @include font-size(42);
+    line-height: vw-size(54);
     font-weight: 200;
-    padding-left: 72px;
+    padding-left: vw-size(72);
   }
 }

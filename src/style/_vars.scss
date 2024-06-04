@@ -16,14 +16,14 @@ $purple: #BA27FF;
 // ====================================
 // grid settings
 // ====================================
-$gutter: 15px;
+$gutter: vw-size(15);
 $gutter-half: ($gutter / 2);
 
-$breakpoint-md: 1070px;
+$breakpoint-md: vw-size(1070);
 
-$container-sm: 500px;
-$container-lg: 1770px;
+$container-sm: vw-size(500);
+$container-lg: vw-size(1770);
 
 
-$content-padding: 78px;
-$content-padding-sm: 32px;
+$content-padding: vw-size(78);
+$content-padding-sm: vw-size(32);

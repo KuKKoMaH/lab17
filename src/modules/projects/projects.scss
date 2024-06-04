@@ -1,24 +1,24 @@
 .projects {
   $this: &;
 
-  margin: 230px 0;
+  margin: vw-size(230) 0;
 
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: -30px;
+    margin: -vw-size(30);
   }
 
   &__item {
     width: 25%;
-    padding: 30px;
+    padding: vw-size(30);
   }
 
   &__card {
     display: block;
     position: relative;
-    border: 1px solid $gray3;
-    padding: 55px;
+    border: vw-size(1) solid $gray3;
+    padding: vw-size(55);
     @include anim();
 
     &:hover {
@@ -64,7 +64,7 @@
     bottom: 100%;
     transform: rotate(90deg);
     @include h5();
-    padding: 8px;
+    padding: vw-size(8);
     background: $gray2;
     transform-origin: 0 100%;
     @include anim();

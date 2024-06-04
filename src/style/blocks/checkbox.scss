@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding-left: 30px;
-  min-height: 24px;
+  padding-left: vw-size(30);
+  min-height: vw-size(24);
   @include mobile() {
-    min-height: 20px;
+    min-height: vw-size(20);
   }
 
   > input {
@@ -15,11 +15,11 @@
 
   > span {
     display: block;
-    font-size: 16px;
+    @include font-size(16);
     line-height: 1.2;
     @include mobile() {
-      padding-top: 3px;
-      font-size: 14px;
+      padding-top: vw-size(3);
+      @include font-size(14);
       line-height: (16/14);
     }
 
@@ -32,29 +32,29 @@
     &:before {
       left: 0;
       top: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 4px;
-      border: 1px solid $black;
+      width: vw-size(24);
+      height: vw-size(24);
+      border-radius: vw-size(4);
+      border: vw-size(1) solid $black;
 
     }
 
     &:after {
       opacity: 0;
-      width: 6px;
-      height: 10px;
-      left: 9px;
-      top: 5px;
-      border: 2px solid $white;
+      width: vw-size(6);
+      height: vw-size(10);
+      left: vw-size(9);
+      top: vw-size(5);
+      border: vw-size(2) solid $white;
       border-top: 0;
       border-left: 0;
       transform: rotate(45deg);
       @include anim();
       //@include mobile() {
-      //width: 4px;
-      //height: 8px;
-      //left: 5px;
-      //top: 2px;
+      //width: vw-size(4);
+      //height: vw-size(8);
+      //left: vw-size(5);
+      //top: vw-size(2);
       //}
     }
   }

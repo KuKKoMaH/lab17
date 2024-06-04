@@ -19,13 +19,13 @@
 
   &-input {
     position: relative;
-    height: 44px;
-    border: 1px solid $gray400;
-    border-radius: 8px;
-    padding: 0 45px 0 14px;
+    height: vw-size(44);
+    border: vw-size(1) solid $gray400;
+    border-radius: vw-size(8);
+    padding: 0 vw-size(45) 0 vw-size(14);
     display: flex;
     align-items: center;
-    font-size: 16px;
+    @include font-size(16);
     line-height: 1.2;
     cursor: pointer;
     @include anim();
@@ -35,19 +35,19 @@
       content: '';
       position: absolute;
       top: 50%;
-      width: 5px;
-      height: 1px;
+      width: vw-size(5);
+      height: vw-size(1);
       background: $gray900;
     }
 
     &:before {
       transform: rotate(45deg);
-      right: 22px;
+      right: vw-size(22);
     }
 
     &:after {
       transform: rotate(-45deg);
-      right: 19px;
+      right: vw-size(19);
     }
 
     &:hover {
@@ -79,17 +79,17 @@
   &-dropdown {
     position: absolute;
     background: #FFFFFF;
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
-    border: 1px solid $gray300;
-    //border-radius: 4px;
+    box-shadow: vw-size(0) vw-size(2) vw-size(7) rgba(0, 0, 0, 0.25);
+    border: vw-size(1) solid $gray300;
+    //border-radius: vw-size(4);
     z-index: 3;
-    margin-top: 2px;
+    margin-top: vw-size(2);
     overflow: hidden;
-    min-width: 220px;
+    min-width: vw-size(220);
 
     .option {
-      min-height: 41px;
-      padding: 10px;
+      min-height: vw-size(41);
+      padding: vw-size(10);
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -107,7 +107,7 @@
   }
 
   &-dropdown-content {
-    max-height: 300px;
+    max-height: vw-size(300);
     overflow: auto;
   }
 }

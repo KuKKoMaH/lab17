@@ -1,12 +1,12 @@
 .aboutHead {
   $this: &;
 
-  height: 720px;
+  height: vw-size(720);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 80px 0;
+  padding: vw-size(80) 0;
 
 
   &__bg {

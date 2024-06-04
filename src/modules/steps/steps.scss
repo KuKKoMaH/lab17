@@ -1,12 +1,12 @@
 .steps {
   $this: &;
 
-  margin: 230px 0;
+  margin: vw-size(230) 0;
 
   &__title {
     @include h2();
     text-align: right;
-    margin-bottom: 110px;
+    margin-bottom: vw-size(110);
   }
 
   &__items {
@@ -16,16 +16,16 @@
   }
 
   &__item {
-    width: 390px;
+    width: vw-size(390);
     position: relative;
-    border-left: 4px solid $cyan;
-    padding-left: 40px;
-    min-height: 134px;
+    border-left: vw-size(4) solid $cyan;
+    padding-left: vw-size(40);
+    min-height: vw-size(134);
     display: flex;
     flex-direction: column;
 
     &:nth-child(2n) {
-      margin-top: 200px;
+      margin-top: vw-size(200);
     }
 
     &--highlight {
@@ -38,9 +38,9 @@
 
   &__number {
     position: absolute;
-    top: -25px;
+    top: -vw-size(25);
     right: 0;
-    font-size: 190px;
+    @include font-size(190);
     font-weight: 900;
     line-height: 1;
     z-index: -1;

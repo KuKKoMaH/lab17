@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
   background: $black;
   //@include media('md') {
-  //  font-size: 16px;
+  //  @include font-size(16)
   //  line-height: 1.375;
   //}
 }
@@ -31,23 +31,23 @@ html, body {
 .c {
   margin-left: auto;
   margin-right: auto;
-  max-width: $container-lg;
+  //max-width: $container-lg;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: vw-size(90);
+  padding-right: vw-size(90);
   //@include media('lg') {
   //  max-width: $container-md;
   //}
   @include media('md') {
-    //padding-left: 15px;
-    //padding-right: 15px;
+    //padding-left: vw-size(15);
+    //padding-right: vw-size(15);
     max-width: $container-sm;
   }
 }
 
 img[data-src],
 img[data-srcset] {
-  min-height: 1px;
+  min-height: vw-size(1);
 }
 
 .hidden {
@@ -99,10 +99,10 @@ img[data-srcset] {
 
 .fullWidth {
   position: relative;
-  width: calc(100vw - var(--scrollbar-width, 0px));
+  width: calc(100vw - var(--scrollbar-width, vw-size(0)));
   left: 50%;
   transform: translateX(-50%);
 
-  //margin-left: calc(-100vw / 2 + 500px / 2);
-  //margin-right: calc(-100vw / 2 + 500px / 2);
+  //margin-left: calc(-100vw / 2 + vw-size(500) / 2);
+  //margin-right: calc(-100vw / 2 + vw-size(500) / 2);
 }

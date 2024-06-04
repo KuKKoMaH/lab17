@@ -3,9 +3,9 @@
 
   margin-top: auto;
   position: relative;
-  border-top: 1px solid $gray3;
+  border-top: vw-size(1) solid $gray3;
   overflow: hidden;
-  padding: 130px 0;
+  padding: vw-size(130) 0;
 
   &__img {
     position: absolute;
@@ -17,14 +17,14 @@
   &__content {
     position: relative;
     left: 50%;
-    margin-left: 160px;
+    margin-left: vw-size(160);
   }
 
   &__title {
-    font-size: 60px;
+    @include font-size(60);
     line-height: 1;
     font-weight: 900;
-    margin-bottom: 70px;
+    margin-bottom: vw-size(70);
   }
 
   &__info {
@@ -37,10 +37,10 @@
   }
 
   &__phone {
-    margin: 20px 0;
+    margin: vw-size(20) 0;
 
     a {
-      font-size: 40px;
+      @include font-size(40);
       line-height: 1;
       color: $cyan;
       text-decoration: none;
@@ -49,15 +49,15 @@
   }
 
   &__links {
-    margin-top: 72px;
+    margin-top: vw-size(72);
     display: flex;
     align-items: center;
 
     a {
-      font-size: 20px;
+      @include font-size(20);
       line-height: 1;
       color: $red;
-      margin-right: 40px;
+      margin-right: vw-size(40);
       text-decoration: none;
       letter-spacing: .4em;
     }

@@ -1,27 +1,27 @@
 .clients {
   $this: &;
 
-  padding: 230px 0;
+  padding: vw-size(230) 0;
 
   &__title {
     @include h1();
-    margin-bottom: 230px;
+    margin-bottom: vw-size(230);
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: -30px;
+    margin: -vw-size(30);
   }
 
   &__item {
-    padding: 30px;
+    padding: vw-size(30);
   }
 
   &__card {
     display: block;
-    border: 2px solid $gray3;
-    padding: 58px;
+    border: vw-size(2) solid $gray3;
+    padding: vw-size(58);
     @include anim();
 
     &:hover {
@@ -32,7 +32,7 @@
   &__content {
     background: $white;
     position: relative;
-    width: 120px;
+    width: vw-size(120);
 
     &:before {
       content: '';

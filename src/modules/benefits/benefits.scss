@@ -1,17 +1,17 @@
 .benefits {
   $this: &;
 
-  margin: 230px 0;
+  margin: vw-size(230) 0;
 
   &__title {
     @include h3();
-    margin-bottom: 100px;
+    margin-bottom: vw-size(100);
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: -60px -30px;
+    margin: -vw-size(60) -vw-size(30);
 
   }
 
@@ -19,8 +19,8 @@
     display: flex;
     flex-grow: 1;
     align-items: flex-start;
-    max-width: 540px;
-    margin: 60px 30px;
+    max-width: vw-size(540);
+    margin: vw-size(60) vw-size(30);
 
     &--01 {
       color: $pink;
@@ -43,13 +43,13 @@
     }
 
     &--wide {
-      max-width: 840px;
+      max-width: vw-size(840);
     }
   }
 
   &__icon {
-    width: 44px;
-    height: 44px;
+    width: vw-size(44);
+    height: vw-size(44);
     position: relative;
     flex-shrink: 0;
 
@@ -61,19 +61,19 @@
     &:before {
       content: '';
       position: absolute;
-      top: 34px;
+      top: vw-size(34);
       left: 50%;
       transform: translateX(-50%);
-      width: 30px;
-      height: 30px;
+      width: vw-size(30);
+      height: vw-size(30);
       border-radius: 50%;
       background: currentColor;
-      filter: blur(20px);
+      filter: blur(vw-size(20));
     }
   }
 
   &__text {
-    margin-left: 36px;
+    margin-left: vw-size(36);
     color: $white;
     @include h6();
     @include manrope();
