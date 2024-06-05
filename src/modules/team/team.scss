@@ -96,15 +96,20 @@
 
         &__name {
           @include h4();
-          margin-bottom: vw-size(32);
+          margin-bottom: vw-size(22);
+          @include mobile() {
+            margin-bottom: vw-size-sm(10);
+          }
         }
 
         &__position {
-          color: $white;
         }
 
         &__label {
-          margin-top: vw-size(32);
+          margin-bottom: vw-size(22);
+          @include mobile() {
+            margin-bottom: vw-size-sm(10);
+          }
         }
       }
     }
@@ -127,6 +132,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include mobile() {
+      z-index: 1;
+      position: relative;
+      margin-top: -#{vw-size-sm(48)};
+    }
   }
 
   &__name {
@@ -134,19 +144,23 @@
     text-transform: uppercase;
     padding: vw-size(8);
     background: $gray2;
-    margin-bottom: vw-size(16);
+    margin-bottom: vw-size(12);
+    @include mobile() {
+      @include h4();
+      padding: vw-size-sm(2) vw-size-sm(5);
+      margin-bottom: vw-size-sm(8);
+    }
+  }
+
+  &__label {
+    @include h6();
+    @include manrope();
+    margin-bottom: vw-size(12);
   }
 
   &__position {
     @include h6();
     @include manrope();
     color: $gray2;
-  }
-
-  &__label {
-    @include h6();
-    @include manrope();
-    color: $gray2;
-    margin-top: vw-size(16);
   }
 }
