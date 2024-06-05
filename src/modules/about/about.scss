@@ -2,7 +2,7 @@
   $this: &;
 
   position: relative;
-  margin: vw-size(250) 0;
+  @include block-margin();
 
   &__bg {
     position: absolute;
@@ -11,10 +11,16 @@
     width: vw-size(1741);
     top: vw-size(430);
     z-index: -1;
+    @include mobile() {
+
+    }
   }
 
   &__container {
     display: flex;
+    @include mobile() {
+      flex-direction: column;
+    }
   }
 
   &__sup {
@@ -22,9 +28,14 @@
     line-height: 1;
     margin-bottom: vw-size(60);
     color: $red;
+    @include mobile() {
+      @include font-size-sm(20);
+      margin-bottom: vw-size-sm(16);
+    }
   }
 
   &__title {
+    white-space: nowrap;
     @include h2();
 
     span {
@@ -36,6 +47,12 @@
     max-width: vw-size(690 + 50);
     padding-left: vw-size(50);
     margin-left: auto;
+    @include mobile() {
+      max-width: 100%;
+      margin: 0;
+      margin-top: vw-size-sm(48);
+      padding: 0;
+    }
 
     > * {
       margin-bottom: vw-size(120);
@@ -62,6 +79,11 @@
     @include manrope();
     @include font-size(22);
     line-height: vw-size(34);
+    color: $gray2;
+    @include mobile() {
+      @include font-size-sm(14);
+      line-height: vw-size-sm(21);
+    }
   }
 
 

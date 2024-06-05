@@ -39,9 +39,11 @@ html, body {
   //  max-width: $container-md;
   //}
   @include media('md') {
+    padding-left: vw-size-sm(25);
+    padding-right: vw-size-sm(25);
     //padding-left: vw-size(15);
     //padding-right: vw-size(15);
-    max-width: $container-sm;
+    //max-width: $container-sm;
   }
 }
 

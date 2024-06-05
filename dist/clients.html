@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- В хроме багует кеш спрайтов--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <title>LAB17</title>
@@ -7,21 +8,35 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1717515303496" rel="stylesheet"></head>
+  <link href="style.css?1717594593108" rel="stylesheet"></head>
   <body onunload="">
     <header class="header">
       <div class="c"><a href="/"><img class="header__logo" src="img/img_logo.svg"></a>
-        <div class="header__menu">
-          <ul>
-            <li><a href="#">о компании</a></li>
-            <li><a href="#">портфолио</a></li>
-            <li><a href="#">партнеры</a></li>
-            <li><a href="#">команда</a></li>
-            <li><a href="#">наши клиенты</a></li>
-            <li><a href="#">контакты</a></li>
-          </ul>
+        <div class="header__content">
+          <div class="header__menu">
+            <ul>
+              <li><a href="#">о компании</a></li>
+              <li><a href="#">портфолио</a></li>
+              <li><a href="#">партнеры</a></li>
+              <li><a href="#">команда</a></li>
+              <li><a href="#">наши клиенты</a></li>
+              <li><a href="#">контакты</a></li>
+            </ul>
+          </div>
+          <div class="header__language"><a class="active" href="#">RU</a><a href="#">ENG</a></div>
         </div>
-        <div class="header__language"><a class="active" href="#">RU</a><a href="#">ENG</a></div>
+        <div class="header__button">
+          <div class="active">
+            <svg>
+              <use xlink:href="img/sprite.svg?1717594597106#menu-usage"></use>
+            </svg>
+          </div>
+          <div class="inactive">
+            <svg>
+              <use xlink:href="img/sprite.svg?1717594597106#close-usage"></use>
+            </svg>
+          </div>
+        </div>
       </div>
     </header>
     <div class="clients">

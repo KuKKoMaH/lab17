@@ -1,12 +1,15 @@
 .projectsHead {
   $this: &;
 
-  margin: vw-size(230) 0;
+  @include block-margin();
 
   &__title {
     @include h1();
     text-align: center;
-    margin-bottom: vw-size(45);
+    @include mobile() {
+      @include h2();
+      margin-bottom: vw-size-sm(20);
+    }
   }
 
   &__switch {
@@ -26,6 +29,11 @@
       text-decoration: none;
       margin: 0 -#{vw-size(1)};
       @include anim2(border-color color);
+      @include mobile() {
+        @include h4_regular();
+        width: vw-size-sm(140);
+        height: vw-size-sm(50);
+      }
 
       &.active {
         z-index: 1;

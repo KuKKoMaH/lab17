@@ -2,15 +2,20 @@ header.header
   .c
     a(href='/'): img.header__logo(src=require('src/img/logo.svg'))
 
-    .header__menu
-      ul
-        li: a(href='#') о компании
-        li: a(href='#') портфолио
-        li: a(href='#') партнеры
-        li: a(href='#') команда
-        li: a(href='#') наши клиенты
-        li: a(href='#') контакты
+    .header__content
+      .header__menu
+        ul
+          li: a(href='#') о компании
+          li: a(href='#') портфолио
+          li: a(href='#') партнеры
+          li: a(href='#') команда
+          li: a(href='#') наши клиенты
+          li: a(href='#') контакты
 
-    .header__language
-      a(href='#').active RU
-      a(href='#') ENG
+      .header__language
+        a(href='#').active RU
+        a(href='#') ENG
+
+    .header__button
+      .active: +the_svg('menu')
+      .inactive: +the_svg('close')

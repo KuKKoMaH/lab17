@@ -3,9 +3,13 @@
 
   margin-top: auto;
   position: relative;
-  border-top: vw-size(1) solid $gray3;
+  border-top: vw-size(2) solid $gray3;
   overflow: hidden;
   padding: vw-size(130) 0;
+  @include mobile() {
+    padding: vw-size-sm(60) 0;
+    border-top: vw-size-sm(2) solid $gray3;;
+  }
 
   &__img {
     position: absolute;
@@ -19,6 +23,10 @@
     position: relative;
     left: 50%;
     margin-left: vw-size(160);
+    @include mobile() {
+      margin: 0 vw-size-sm(25);
+      left: 0;
+    }
   }
 
   &__title {
@@ -26,6 +34,10 @@
     line-height: 1;
     font-weight: 900;
     margin-bottom: vw-size(70);
+    @include mobile() {
+      @include h4();
+      margin-bottom: vw-size-sm(45);
+    }
   }
 
   &__info {
@@ -39,6 +51,9 @@
 
   &__phone {
     margin: vw-size(20) 0;
+    @include mobile() {
+      margin: vw-size-sm(10) 0;
+    }
 
     a {
       @include font-size(40);
@@ -46,6 +61,9 @@
       color: $cyan;
       text-decoration: none;
       font-weight: 900;
+      @include mobile() {
+        @include h4();
+      }
     }
   }
 
@@ -53,6 +71,9 @@
     margin-top: vw-size(72);
     display: flex;
     align-items: center;
+    @include mobile() {
+      margin-top: vw-size-sm(30);
+    }
 
     a {
       @include font-size(20);
@@ -61,6 +82,10 @@
       margin-right: vw-size(40);
       text-decoration: none;
       letter-spacing: .4em;
+      @include mobile() {
+        margin-right: vw-size-sm(20);
+        @include font-size-sm(12);
+      }
     }
   }
 }

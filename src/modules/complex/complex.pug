@@ -2,8 +2,10 @@
   .c
     .complex__title
       strong
-        | МЫ РЕАЛИЗУЕМ КОМПЛЕКС МЕРОПРИЯТИЙ #[br]
+        | МЫ РЕАЛИЗУЕМ #[span КОМПЛЕКС МЕРОПРИЯТИЙ] #[br]
         | С ЦЕЛЬЮ ПОВЫШЕНИЯ КОМФОРТНОСТИ, #[br]
       | УЧИТЫВАЯ СОВРЕМЕННЫЕ ТРЕНДЫ ЭКОЛОГИЧЕСКИХ СТАНДАРТОВ И СТАНДАРТОВ БЕЗОПАСНОСТИ.
 
-    img.complex__img(src=require('src/modules/complex/img/img.jpg'))
+    picture.complex__img
+      source(media="(max-width: 1070px)" srcset=require('src/modules/complex/img/img-sm.jpg'))
+      img(src=require('src/modules/complex/img/img.jpg'))

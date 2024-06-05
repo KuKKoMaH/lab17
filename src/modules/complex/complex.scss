@@ -1,7 +1,7 @@
 .complex {
   $this: &;
 
-  margin: vw-size(230) 0;
+  @include block-margin();
 
   &__title {
     @include h3_regular();
@@ -9,6 +9,10 @@
 
     strong {
       font-weight: 900;
+    }
+
+    span {
+      color: $red;
     }
   }
 
@@ -18,5 +22,11 @@
     width: 100%;
     max-width: 100%;
     height: auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 }

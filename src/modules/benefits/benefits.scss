@@ -1,18 +1,23 @@
 .benefits {
   $this: &;
 
-  margin: vw-size(230) 0;
+  @include block-margin();
 
   &__title {
     @include h3();
     margin-bottom: vw-size(100);
+    @include mobile() {
+      margin-bottom: vw-size-sm(30);
+    }
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
     margin: -#{vw-size(60)} -#{vw-size(30)};
-
+    @include mobile() {
+      margin: 0;
+    }
   }
 
   &__item {
@@ -21,6 +26,11 @@
     align-items: flex-start;
     max-width: vw-size(540);
     margin: vw-size(60) vw-size(30);
+    @include mobile() {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 0 vw-size-sm(35) 0;
+    }
 
     &--01 {
       color: $pink;
@@ -44,6 +54,9 @@
 
     &--wide {
       max-width: vw-size(840);
+      @include mobile() {
+        max-width: 100%;
+      }
     }
   }
 
@@ -52,6 +65,10 @@
     height: vw-size(44);
     position: relative;
     flex-shrink: 0;
+    @include mobile() {
+      width: vw-size-sm(36);
+      height: vw-size-sm(36);
+    }
 
     svg {
       width: 100%;
@@ -69,13 +86,23 @@
       border-radius: 50%;
       background: currentColor;
       filter: blur(vw-size(20));
+      @include mobile() {
+        top: vw-size-sm(26);
+        width: vw-size-sm(26);
+        height: vw-size-sm(26);
+        filter: blur(vw-size-sm(20));
+      }
     }
   }
 
   &__text {
     margin-left: vw-size(36);
-    color: $white;
+    color: $gray2;
     @include h6();
     @include manrope();
+    @include mobile() {
+      width: 100%;
+      margin-left: vw-size-sm(16);
+    }
   }
 }

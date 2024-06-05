@@ -1,8 +1,8 @@
 .mission {
   $this: &;
 
-  margin: vw-size(230) 0;
   position: relative;
+  @include block-margin();
 
   &__title {
     position: absolute;
@@ -13,15 +13,37 @@
     left: 50%;
     transform: translateX(-50%);
 
-    background-image: linear-gradient(to bottom, $gray2, $black);
-    background-clip: text;
-    color: transparent;
+
+    span {
+      display: inline-block;
+      background-image: linear-gradient(to bottom, $gray2, $black);
+      background-clip: text;
+      color: transparent;
+    }
+
+    @include mobile() {
+      @include font-size-sm(100);
+      white-space: normal;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      span:last-child {
+        margin-top: -#{vw-size-sm(36)};
+      }
+    }
   }
 
-  &__img  {
+  &__img {
     width: vw-size(560);
     flex-shrink: 0;
     height: auto;
+    @include mobile() {
+      width: vw-size-sm(220);
+    }
   }
 
   &__container {
@@ -32,6 +54,11 @@
     padding: vw-size(125) vw-size(15) 0;
     position: relative;
     z-index: 1;
+    @include mobile() {
+      flex-direction: column;
+      max-width: none;
+      padding: vw-size-sm(130) vw-size-sm(15) 0;
+    }
   }
 
   &__text {
@@ -40,5 +67,13 @@
     line-height: vw-size(54);
     font-weight: 200;
     padding-left: vw-size(72);
+    @include mobile() {
+      margin-top: vw-size-sm(25);
+      @include font-size-sm(16);
+      line-height: vw-size-sm(26);
+
+      padding: 0;
+      text-align: center;
+    }
   }
 }

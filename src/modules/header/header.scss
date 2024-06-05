@@ -1,18 +1,51 @@
 .header {
   $this: &;
 
+  border-bottom: vw-size(2) solid $gray3;
+
   .c {
     display: flex;
     align-items: center;
     height: vw-size(148);
+    @include mobile() {
+      height: vw-size-sm(70);
+    }
   }
 
   &__logo {
     width: vw-size(280);
+    @include mobile() {
+      width: vw-size-sm(120);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      position: absolute;
+      top: vw-size-sm(72);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 5;
+      background: $black;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 vw-size-sm(25) vw-size-sm(30);
+      @include overflow-scroll();
+      @include hidden();
+      @include anim2(opacity transform visibility, .25s);
+      transform: translateY(-15px);
+    }
   }
 
   &__menu {
     margin: 0 auto;
+    @include mobile() {
+      margin: auto 0;
+    }
 
     ul, li {
       margin: 0;
@@ -24,10 +57,20 @@
       display: flex;
       align-items: center;
       list-style: none;
+      @include mobile() {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        justify-content: space-between;
+      }
     }
 
     li {
       padding: 0 vw-size(12);
+      @include mobile() {
+
+        padding: vw-size-sm(20) 0;
+      }
     }
 
     a {
@@ -38,6 +81,10 @@
 
       &:hover {
         color: $cyan;
+      }
+
+      @include mobile() {
+        @include h3();
       }
     }
   }
@@ -58,6 +105,11 @@
       border: vw-size(2) solid $gray3;
       margin: 0 -#{vw-size(1)};
       @include anim2(border-color color);
+      @include mobile() {
+        @include h4_regular();
+        width: vw-size-sm(70);
+        height: vw-size-sm(40);
+      }
 
       &.active {
         border-color: $cyan;
@@ -66,6 +118,69 @@
 
       &:hover {
         color: $cyan;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+    @include mobile() {
+      margin-left: auto;
+      position: relative;
+      display: block;
+      width: vw-size-sm(38);
+      height: vw-size-sm(38);
+      color: $white;
+      @include anim2(color);
+
+      &:hover {
+        color: $cyan;
+      }
+
+      svg {
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .active, .inactive {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include anim2(opacity);
+      }
+
+      .active {
+        opacity: 1;
+      }
+
+      .inactive {
+        opacity: 0;
+      }
+    }
+  }
+
+  &--active {
+    @include mobile() {
+      #{$this} {
+        &__content {
+          @include visible();
+          transform: none;
+        }
+
+        &__button {
+          .active {
+            opacity: 0;
+          }
+
+          .inactive {
+            opacity: 1;
+          }
+        }
       }
     }
   }

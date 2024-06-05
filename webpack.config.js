@@ -82,7 +82,7 @@ module.exports = {
           {
             loader:  "css-loader",
             options: {
-              url: (url) => url.includes("img/sprite.svg") ? false : true,
+              url: ( url ) => url.includes("img/sprite.svg") ? false : true,
             },
           },
           {
@@ -127,7 +127,7 @@ module.exports = {
           {
             loader:  "file-loader",
             options: {
-              name:       (resourcePath, resourceQuery) => path.relative(src,
+              name:       ( resourcePath, resourceQuery ) => path.relative(src,
                 resourcePath).replace(/\//g, "_"),
               esModule:   false,
               outputPath: "img",
@@ -159,9 +159,9 @@ module.exports = {
               esModule:       false,
               extract:        true,
               outputPath:     "img/",
-              publicPath:     `img/`,
+              publicPath:     `/img/`,
               symbolId:       filePath => path.basename(filePath).split(".")[0],
-              spriteFilename: (name) => {
+              spriteFilename: ( name ) => {
                 if (name.includes("src/modules")) {
                   return `${name.match(
                     /.*\/src\/modules\/(.*?)\//)[1]}.sprite.svg`;
@@ -221,8 +221,8 @@ module.exports = {
   } : undefined,
 
   devServer: {
-    host:        "0.0.0.0",
-    port:        8081,
+    host: "0.0.0.0",
+    port: 8081,
     // contentBase: dist, // для раздачи png спрайта
   },
 

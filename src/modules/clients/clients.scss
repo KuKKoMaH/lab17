@@ -1,22 +1,32 @@
 .clients {
   $this: &;
 
-  padding: vw-size(230) 0;
+  @include block-margin();
 
   &__title {
     @include h1();
     margin-bottom: vw-size(230);
+    @include mobile() {
+      margin-bottom: vw-size-sm(100);
+    }
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
     margin: -#{vw-size(30)};
+    @include mobile() {
+      margin: -#{vw-size-sm(15)};
+    }
   }
 
   &__item {
     padding: vw-size(30);
     width: calc(100% / 6);
+    @include mobile() {
+      padding: vw-size-sm(15);
+      width: calc(100% / 3);
+    }
   }
 
   &__card {
@@ -24,6 +34,10 @@
     border: vw-size(2) solid $gray3;
     padding: vw-size(58);
     @include anim2(border-color);
+    @include mobile() {
+      border: vw-size-sm(2) solid $gray3;
+      padding: vw-size-sm(15);
+    }
 
     &:hover {
       border-color: $cyan;
@@ -33,7 +47,8 @@
   &__content {
     background: $white;
     position: relative;
-    width: vw-size(120);
+    width: 100%;
+
 
     &:before {
       content: '';

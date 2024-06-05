@@ -1,11 +1,14 @@
 .contacts {
   $this: &;
 
-  padding: vw-size(230) 0;
+  @include block-margin();
 
   &__title {
     @include h1();
     margin-bottom: vw-size(230);
+    @include mobile() {
+      margin-bottom: vw-size-sm(110);
+    }
   }
 
   &__items {
@@ -13,6 +16,10 @@
     flex-wrap: wrap;
     margin: -#{vw-size(60)} 0;
     align-items: flex-start;
+    @include mobile() {
+      margin: 0;
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -20,6 +27,11 @@
     margin: vw-size(60) 0;
     border-left: vw-size(4) solid $cyan;
     padding-left: vw-size(80);
+    @include mobile() {
+      width: 100%;
+      margin: 0 0 vw-size-sm(60) 0;
+      border-left: vw-size-sm(4) solid $cyan;
+    }
   }
 
   &__label {
@@ -28,12 +40,20 @@
     letter-spacing: .4em;
     @include manrope();
     margin-bottom: vw-size(32);
+    @include mobile() {
+      @include font-size-sm(12);
+      margin-bottom: vw-size-sm(20);
+    }
   }
 
   &__value {
     @include font-size(32);
     @include manrope();
     max-width: vw-size(500);
+    @include mobile() {
+      @include font-size-sm(20);
+      max-width: 100%;
+    }
 
     a {
       text-decoration: none;
@@ -46,6 +66,9 @@
     line-height: 1;
     font-weight: 900;
     color: $cyan;
+    @include mobile() {
+      @include font-size-sm(32);
+    }
   }
 
   &__links {
@@ -57,6 +80,13 @@
       @include font-size(32);
       letter-spacing: .4em;
       color: $red;
+      @include mobile() {
+        margin-bottom: vw-size-sm(20);
+        @include font-size-sm(16);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

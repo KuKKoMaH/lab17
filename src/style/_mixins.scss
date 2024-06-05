@@ -6,10 +6,10 @@
   }
 }
 
-@mixin anim2($properties) {
+@mixin anim2($properties, $duration: .1s) {
   $transitions: "";
   @each $property in $properties {
-    $transitions: if($transitions == "", "#{$property} 0.1s ease-in", "#{$transitions}, #{$property} 0.3s ease-in");
+    $transitions: if($transitions == "", "#{$property} #{$duration} ease-in", "#{$transitions}, #{$property} #{$duration} ease-in");
   }
   transition: #{$transitions};
 }
@@ -88,12 +88,28 @@
   letter-spacing: -.02em;
 }
 
+@mixin overflow-scroll() {
+  overflow: auto;
+  overscroll-behavior: contain;
+  //scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  //touch-action: pan-y;
+}
+
 @function vw-size($size) {
   @return #{$size / 1920 * 100}vw;
 }
 
+@function vw-size-sm($size) {
+  @return #{$size / 360 * 100}vw;
+}
+
 @mixin font-size($size) {
   font-size: #{vw-size($size)};
+}
+
+@mixin font-size-sm($size) {
+  font-size: #{vw-size-sm($size)};
 }
 
 @mixin h1() {
@@ -101,7 +117,7 @@
   font-weight: 900;
   @include header();
   @include mobile() {
-    @include font-size(42);
+    @include font-size-sm(42);
   }
 }
 
@@ -110,7 +126,7 @@
   font-weight: 900;
   @include header();
   @include mobile() {
-    @include font-size(34);
+    @include font-size-sm(34);
   }
 }
 
@@ -119,7 +135,7 @@
   font-weight: 900;
   @include header();
   @include mobile() {
-    @include font-size(26);
+    @include font-size-sm(26);
   }
 }
 
@@ -128,7 +144,7 @@
   font-weight: 400;
   @include header();
   @include mobile() {
-    @include font-size(26);
+    @include font-size-sm(26);
   }
 }
 
@@ -137,7 +153,7 @@
   font-weight: 900;
   @include header();
   @include mobile() {
-    @include font-size(20);
+    @include font-size-sm(20);
   }
 
 }
@@ -147,7 +163,7 @@
   font-weight: 400;
   @include header();
   @include mobile() {
-    @include font-size(20);
+    @include font-size-sm(20);
   }
 }
 
@@ -156,7 +172,7 @@
   font-weight: 900;
   @include header();
   @include mobile() {
-    @include font-size(16);
+    @include font-size-sm(16);
   }
 }
 
@@ -166,8 +182,14 @@
   @include header();
   line-height: vw-size(34);
   @include mobile() {
-    @include font-size(14);
-    line-height: vw-size(21);
+    @include font-size-sm(14);
+    line-height: vw-size-sm(21);
   }
 }
 
+@mixin block-margin() {
+  margin: vw-size(230) 0;
+  @include mobile() {
+    margin: vw-size-sm(105) 0;
+  }
+}

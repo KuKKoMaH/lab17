@@ -1,6 +1,7 @@
+// В хроме багует кеш спрайтов
 mixin the_svg(svgIcon, fileName)
   svg()&attributes(attributes)
-    use(xlink:href=`img/${fileName ? fileName + '.sprite' : 'sprite'}.svg#` + svgIcon + '-usage')
+    use(xlink:href=`img/${fileName ? fileName + '.sprite' : 'sprite'}.svg?${+new Date()}#` + svgIcon + '-usage')
 
 mixin breadcrumbs(items)
   .breadcrumbs

@@ -7,11 +7,18 @@
     display: flex;
     flex-wrap: wrap;
     margin: -#{vw-size(30)};
+    @include mobile() {
+      margin: -#{vw-size-sm(15)};
+    }
   }
 
   &__item {
     width: 25%;
     padding: vw-size(30);
+    @include mobile() {
+      width: 50%;
+      padding: vw-size-sm(15);
+    }
   }
 
   &__card {
@@ -20,6 +27,10 @@
     border: vw-size(1) solid $gray3;
     padding: vw-size(55);
     @include anim2(border-color background);
+    @include mobile() {
+      border-width: vw-size-sm(2);
+      padding: vw-size-sm(23);
+    }
 
     &:hover {
       #{$this}__img {
@@ -68,6 +79,9 @@
     background: $gray2;
     transform-origin: 0 100%;
     @include anim2(background);
+    @include mobile() {
+      padding: vw-size-sm(2) vw-size-sm(5);
+    }
   }
 
   &__img {

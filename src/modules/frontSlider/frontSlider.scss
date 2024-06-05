@@ -1,13 +1,24 @@
 .frontSlider {
   $this: &;
 
+  @include mobile() {
+    height: vw-size-sm(600);
+  }
+
   &__slider {
     overflow: hidden;
     position: relative;
+    @include mobile() {
+      height: 100%;
+    }
   }
 
   &__slides {
     display: flex;
+    @include mobile() {
+      flex-direction: column;
+      height: 100%;
+    }
   }
 
   &__slide {
@@ -20,8 +31,13 @@
     display: flex;
     flex-direction: column;
     height: vw-size(880);
-    padding: vw-size(70) 0;
-    padding-right: vw-size(180);
+    //padding: vw-size(70) 0;
+    //padding-right: vw-size(180);
+    padding: 0 vw-size(90 + 180) vw-size(70) vw-size(90);
+    @include mobile() {
+      height: 100%;
+      padding: vw-size-sm(0) vw-size-sm(25) vw-size-sm(30 + 60);
+    }
   }
 
   &__bg {
@@ -32,6 +48,12 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    @include mobile() {
+      width: 100%;
+      height: calc(100% + #{vw-size-sm(60)});
+      top: auto;
+      bottom: 0;
+    }
   }
 
   &__title {
@@ -41,12 +63,18 @@
 
   &__footer {
     display: flex;
+    @include mobile() {
+      flex-direction: column;
+    }
   }
 
   &__note {
     @include h4();
     background: $red;
     padding: vw-size(10);
+    @include mobile() {
+      padding: vw-size-sm(7);
+    }
   }
 
   &__aside {
@@ -54,6 +82,18 @@
     @include h5();
     display: flex;
     align-items: center;
+    @include mobile() {
+      flex-direction: column;
+      margin: 0;
+      margin-top: vw-size-sm(30);
+
+      span:first-child {
+        align-self: flex-start;
+      }
+      span:last-child {
+        align-self: flex-end;
+      }
+    }
   }
 
   &__separator {
@@ -62,6 +102,11 @@
     width: vw-size(80);
     height: vw-size(1);
     margin: 0 vw-size(20);
+    @include mobile() {
+      width: vw-size-sm(80);
+      height: vw-size-sm(2);
+      margin: vw-size-sm(8) 0;
+    }
   }
 
   &__button {
@@ -76,10 +121,23 @@
     align-items: center;
     justify-content: center;
     @include anim2(color);
+    @include mobile() {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: vw-size-sm(11);
+
+      width: vw-size-sm(38);
+      height: vw-size-sm(38);
+    }
 
     svg {
       width: vw-size(32);
       height: vw-size(32);
+      @include mobile() {
+        width: vw-size-sm(18);
+        height: vw-size-sm(18);
+        rotate: 90deg;
+      }
     }
 
     &:disabled {
