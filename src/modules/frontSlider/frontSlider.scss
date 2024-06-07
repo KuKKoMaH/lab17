@@ -70,11 +70,24 @@
 
   &__note {
     @include h4();
-    background: $red;
     padding: vw-size(10);
     @include mobile() {
-      padding: vw-size-sm(7);
+    line-height: 1.8;
+      max-width: 80%;
     }
+
+    span {
+      padding: vw-size-sm(3) vw-size-sm(0);
+      background: $red;
+      display: inline;
+      box-shadow: 0.5rem 0 0 $red, -0.5rem 0 0 $red;
+      -webkit-box-decoration-break: clone;
+      -ms-box-decoration-break: clone;
+      -o-box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    span {}
   }
 
   &__aside {

@@ -2,8 +2,17 @@ extends ../pug/_layout
 
 block body
   include ../modules/aboutHead/aboutHead
+
+  img.decor.decor--about01(src=require('src/img/about_01.jpg'))
+
   include ../modules/mission/mission2
   include ../modules/complex/complex
+
+  img.decor.decor--about02(src=require('src/img/about_02.jpg'))
+
   include ../modules/benefits/benefits
   include ../modules/steps/steps
+
+  img.decor.decor--about03(src=require('src/img/about_03.jpg'))
+
   include ../modules/team/team

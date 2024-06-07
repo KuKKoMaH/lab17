@@ -4,10 +4,11 @@
   margin-top: auto;
   position: relative;
   border-top: vw-size(2) solid $gray3;
+  background: $black;
   overflow: hidden;
   padding: vw-size(130) 0;
   @include mobile() {
-    padding: vw-size-sm(60) 0;
+    padding: vw-size-sm(60) 0 vw-size-sm(310);
     border-top: vw-size-sm(2) solid $gray3;;
   }
 
@@ -17,6 +18,11 @@
     top: 0;
     z-index: -1;
     width: vw-size(1014);
+    @include mobile() {
+      top: auto;
+      bottom: 0;
+      width: 100%;
+    }
   }
 
   &__content {
@@ -35,7 +41,7 @@
     font-weight: 900;
     margin-bottom: vw-size(70);
     @include mobile() {
-      @include h4();
+      @include font-size-sm(32);
       margin-bottom: vw-size-sm(45);
     }
   }
@@ -62,7 +68,7 @@
       text-decoration: none;
       font-weight: 900;
       @include mobile() {
-        @include h4();
+        @include font-size-sm(32);
       }
     }
   }

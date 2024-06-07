@@ -30,6 +30,7 @@
   }
 
   &__card {
+    background: $black;
     display: block;
     border: vw-size(2) solid $gray3;
     padding: vw-size(58);

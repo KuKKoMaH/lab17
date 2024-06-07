@@ -1,7 +1,10 @@
 .project {
   $this: &;
 
-  @include block-margin();
+  margin-bottom: vw-size(230);
+  @include mobile() {
+    margin-bottom: vw-size-sm(105);
+  }
 
   &__main {
     display: flex;

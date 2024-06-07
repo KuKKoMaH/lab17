@@ -108,3 +108,68 @@ img[data-srcset] {
   //margin-left: calc(-100vw / 2 + vw-size(500) / 2);
   //margin-right: calc(-100vw / 2 + vw-size(500) / 2);
 }
+
+
+.decor {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--front01 {
+    margin-top: vw-size(450);
+    width: vw-size(1540);
+  }
+
+  &--front02 {
+    margin-top: -#{vw-size(400)};
+    left: 50%;
+    transform: none;
+    width: vw-size(1073);
+  }
+
+  &--about01 {
+    margin-top: vw-size(600);
+    width: vw-size(1540);
+  }
+
+  &--about02 {
+    width: vw-size(1540);
+  }
+
+  &--about03 {
+    margin-top: vw-size(100);
+    width: vw-size(1073);
+  }
+
+  &--projects01 {
+    margin-top: vw-size(-50);
+    width: vw-size(1540);
+  }
+
+  &--project01 {
+    margin-top: vw-size(230);
+    width: vw-size(1540);
+  }
+
+  &--partners01 {
+    margin-top: vw-size(190);
+    width: vw-size(1540);
+  }
+
+  &--team01 {
+    margin-top: vw-size(90);
+    width: vw-size(1540);
+  }
+
+  &--clients01 {
+    margin-top: vw-size(-320);
+    width: vw-size(1540);
+  }
+
+  &--contacts01 {
+    margin-top: vw-size(220);
+    width: vw-size(1540);
+  }
+}

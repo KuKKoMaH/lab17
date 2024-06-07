@@ -1,7 +1,14 @@
 extends ../pug/_layout
 
 block body
+
   include ../modules/frontSlider/frontSlider
+
+  img.decor.decor--front01(src=require('src/img/front_01.jpg'))
+
   include ../modules/about/about
   include ../modules/projects/projects
+
+  img.decor.decor--front02(src=require('src/img/front_02.jpg'))
+
   include ../modules/mission/mission

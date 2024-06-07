@@ -2,6 +2,11 @@
   $this: &;
 
   border-bottom: vw-size(2) solid $gray3;
+  background: $black;
+
+  @include mobile() {
+    border-bottom: vw-size-sm(2) solid $gray3;
+  }
 
   .c {
     display: flex;

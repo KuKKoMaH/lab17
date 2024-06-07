@@ -25,6 +25,7 @@
     display: block;
     position: relative;
     border: vw-size(1) solid $gray3;
+    background: $black;
     padding: vw-size(55);
     @include anim2(border-color background);
     @include mobile() {
